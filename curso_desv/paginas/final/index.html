@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+
+<script src="../../js/createjs/easeljs-0.8.1.min.js"></script>
+<script src="../../js/createjs/tweenjs-0.6.1.min.js"></script>
+<script src="../../js/createjs/movieclip-0.8.1.min.js"></script>
+<script src="../../js/createjs/preloadjs-0.6.1.min.js"></script>
+<script src="index.js"></script>
+
+<script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._final();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+    
+    parent.course.removePreloader();         
+    
+}
+</script>
+</head>
+
+<body onload="init();" >
+	<canvas id="canvas" width="1000" height="600" ></canvas>
+</body>
+</html>

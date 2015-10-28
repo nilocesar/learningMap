@@ -1,0 +1,17 @@
+{
+    "config": [{
+        "modulo": "intro",
+        "telas": [
+            ["menu", "paginas/menu/index.html"]
+        ]
+    }],
+    "menusAll": 7,
+    "menusAtivos":[],
+    "size": {
+        "width": 1000,
+        "height": 600
+    },
+    "transition": "fadeIn",
+    "debug": false,
+    "cache": true
+}

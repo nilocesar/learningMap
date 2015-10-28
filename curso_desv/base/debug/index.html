@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+</head>
+
+<body>
+    <label>Tela Destino:</label>
+    <input id="idInputTela" type "text" />
+    <button type="button" onclick="fnDebug()">IR!</button>
+    <br><br>
+    <label id="modulo">Modulo Atual: <spam></spam></label><br>
+    <label id="tela">Tela Atual: <spam></spam></label>
+    
+</body>
+
+<script type="text/javascript" src="../../js/vendor/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+    function fnDebug() {
+        var vlrInput = document.getElementById("idInputTela").value;
+        parent.course.gotoScreen(vlrInput.toUpperCase());
+    }
+
+    $(function() {
+        $("#idInputTela").keyup(function(e) {
+            if (e.keyCode === 13) {
+                fnDebug();
+            }
+        });
+    });
+    
+    
+    //
+    setInterval( function(){ 
+    
+        $("#modulo spam").text( parent.course.moduloCurrent );
+        $("#tela spam").text( parent.course.telaCurrent );
+        
+    }, 1000 * 0.2 );
+    
+    
+</script>
+
+</html>

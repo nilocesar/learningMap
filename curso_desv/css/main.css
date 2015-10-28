@@ -1,0 +1,173 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    overflow: hidden;
+    margin: 0px 0px 0px 0px;
+    /* the extra 1px allows the iOS inner/outer check to work */
+    background-color: #29488F;
+    background-image: url(../img/bg.jpg);
+	background-size: cover;
+}
+
+
+.navbar-header {
+    padding-top: 5px;
+}
+
+.preloader {
+    position: absolute;
+    background-image: url("../img/preloader.gif");
+    height: 56px;
+    width: 56px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    z-index: 99999;
+    display: none;
+}
+
+/*
+.logo {
+    position: relative;
+    top: 25px;
+    left: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo {
+        left: -30px;
+    }
+}
+*/
+
+.icoNav {
+    cursor: pointer;
+}
+
+#fechar {
+    position: relative;
+    top: 15px;
+    z-index: 9999999;
+}
+
+.container {
+    position: relative;
+    top: 25px;
+    width:1000px;
+    right: 10px;
+    z-index: 99999999999;
+    display: none;
+}
+
+.barraMenu {
+    /* -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    background-color: #fff;*/
+}
+
+.centerContainer {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -300px 0 0 -500px;
+}
+
+/*@media screen and (max-width: 1024px) {
+    .centerContainer {
+        margin-left: -500px;
+        top: 55%;
+    }
+}*/
+
+.telasContainer {
+    position: relative;
+    width: 875px;
+    height: 520px;
+    float: left;
+}
+
+.telasShadow {
+    /* -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);*/
+}
+
+.menuContainer {
+    position: relative;
+    float: left;
+    z-index: 999;
+    padding-top: 55px;
+    padding-left: 20px;
+}
+
+#contentDebug {
+    position: absolute;
+    z-index: 9999;
+}
+
+
+/*= Modal in lightbox
+	----------------------------*/
+
+#v5_lightbox {
+    width: 100%;
+    height: 100%;
+    z-index: 555789;
+    position: fixed;
+    display: block;
+    top: 0px;
+}
+
+#v5_lightbox .bcg {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.15;
+    position: absolute;
+    cursor: pointer;
+}
+
+.modalIframe {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+/* --------------------------*/
+
+.fecharModal {
+    position: absolute;
+    background-image: url("../img/fecharModal.png");
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    right: 0px;
+    margin: 20px;
+    z-index: 60000;
+}
+
+
+/*Figura em modo portrait*/
+
+.portrait {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    background: url("../img/orientation.gif") no-repeat center center;
+    background-color: #f5f5f5;
+    position: relative;
+    overflow: hidden;
+    position: fixed;
+    display: none;
+}
